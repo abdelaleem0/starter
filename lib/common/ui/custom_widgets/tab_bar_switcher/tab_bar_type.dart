@@ -1,0 +1,4 @@
+enum TabBarType{
+  normal ,
+  purchase
+}

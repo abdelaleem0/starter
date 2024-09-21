@@ -1,0 +1,80 @@
+
+import 'package:starter/common/domain/models/token.dart';
+import 'package:equatable/equatable.dart';
+
+// import 'city.dart';
+// import 'country.dart';
+
+class ConsultantProfile extends Equatable {
+  final UserBasicInfo basicInfo;
+  final String? coverPicture;
+  final String phone;
+  final String? email;
+  // final AppCountry country;
+  // final City? city;
+  final String? address;
+  final String? bio;
+  final String countryCode;
+  final int followersCount;
+  final double rating;
+  final bool hidePhone;
+  final bool hideLocation;
+
+  String get rawPhoneNumber => phone.replaceFirst("+$countryCode", "");
+
+  const ConsultantProfile(
+      this.basicInfo,
+      this.coverPicture,
+      this.phone,
+      this.email,
+      // this.country,
+      // this.city,
+      this.address,
+      this.bio,
+      this.countryCode,
+      this.followersCount,
+      this.rating,
+      this.hidePhone,
+      this.hideLocation,
+      );
+
+  // String getFullAddress() {
+  //   if (city != null && address?.isNotEmpty == true) {
+  //     return "${city?.name ?? ""} - ${address ?? ""}";
+  //   }
+  //   return city?.name ?? address ?? "";
+  // }
+
+  @override
+  List<Object?> get props => [
+    basicInfo,
+    coverPicture,
+    phone,
+    email,
+    // country,
+    // city,
+    address,
+    bio,
+    countryCode,
+    followersCount,
+    rating,
+    hidePhone,
+    hideLocation
+  ];
+}
+
+class UserBasicInfo extends Equatable {
+  final String id;
+  final Token token;
+
+  const UserBasicInfo(
+    this.id,
+    this.token,
+  );
+
+  @override
+  List<Object?> get props => [
+        id,
+        token,
+      ];
+}

@@ -1,0 +1,5 @@
+
+enum RegisterRole {
+  user,
+  consultant,
+}
