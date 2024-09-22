@@ -1,6 +1,5 @@
 import 'dart:io';
 
-import 'package:app_settings/app_settings.dart';
 import 'package:device_info_plus/device_info_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -154,19 +153,6 @@ class AppPermissions {
       await openAppSettings();
     } on PlatformException catch (e) {
       debugPrint("Error opening app settings: $e");
-    }
-  }
-  Future<void> openANotificationAppSettings() async {
-    try {
-      if(Platform.isAndroid){
-        await AppSettings.openAppSettings(type: AppSettingsType.notification);
-
-      }else{
-        await AppSettings.openAppSettings();
-      }
-    } on PlatformException catch (e) {
-      debugPrint("Error opening app settings: $e");
-
     }
   }
 

@@ -134,7 +134,7 @@ dependencies:
   flutter_quill:
   readmore: ^3.0.0
   #  audioplayers:
-  just_audio:
+#  just_audio:
   flutter_staggered_animations: ^1.1.1
   #for deeplink in android and ios
   uni_links:
