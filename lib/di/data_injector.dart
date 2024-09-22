@@ -16,9 +16,8 @@ class DataDi {
   static Future<void> initialize() async {
     injector.registerSingleton<RealTimeTimer>(RealTimeTimer());
 
-    // injector.registerLazySingleton(() => LocalNotificationService.initiate());
     injector.registerLazySingleton(
-      () => const FlutterSecureStorage(
+          () => const FlutterSecureStorage(
         aOptions: AndroidOptions(
           encryptedSharedPreferences: true,
         ),
@@ -26,13 +25,13 @@ class DataDi {
     );
 
     injector.registerLazySingleton<PreferencesHelper>(
-        () => PreferencesHelperImp(injector()));
+            () => PreferencesHelperImp(injector()));
 
     injector.registerLazySingletonAsync<SharedPreferences>(
-        () => SharedPreferences.getInstance());
+            () => SharedPreferences.getInstance());
 
     injector.registerLazySingleton<ShardPreferencesHelper>(
-        () => SharedPreferencesHelperImp());
+            () => SharedPreferencesHelperImp());
 
     injector.registerLazySingleton<Link>(() {
       final link = Link.from([
@@ -64,17 +63,17 @@ class DataDi {
 
       final webSocketLink = WebSocketLink(Constants.subscriptionLink,
           config:
-              const SocketClientConfig(initialPayload: authenticationHeader));
+          const SocketClientConfig(initialPayload: authenticationHeader));
 
       final x = Link.split(
-          (request) => request.isSubscription, webSocketLink, concatLink);
+              (request) => request.isSubscription, webSocketLink, concatLink);
       return x;
     });
 
     injector.registerLazySingleton(() => GraphQLClient(
-          link: injector(),
-          cache: GraphQLCache(),
-        ));
+      link: injector(),
+      cache: GraphQLCache(),
+    ));
   }
 
   static Future<Map<String, dynamic>> authenticationHeader() async {

@@ -1,4 +1,8 @@
 import 'package:get_it/get_it.dart';
+import 'package:starter/app/authentication/di/authentication_injector.dart';
+import 'package:starter/common/di/common_injector.dart';
+import 'package:starter/common/utils/media_utils/src/injector/media_utils_injector.dart';
+import 'package:starter/di/data_injector.dart';
 import 'localizations_container.dart';
 
 final injector = GetIt.instance;
@@ -17,25 +21,8 @@ Future<void> resetScopeDependencies() async {
 }
 
 Future<void> registerAppDependencies() async {
-  // DataDi.initialize();
-  // CommonDi.initialize();
-  // AuthenticationDi.initialize();
-  // WeeklyPlannerDi.initialize();
-  // SetGoalDi.initialize();
-  // PurchaseDi.initialize();
-  // WeeklyPlannerFeedbackDi.initialize();
-  // InitialHomeDi.initialize();
-  // HomeDi.initialize();
-  // WeeklyPlannerSketchDi.initialize();
-  // WeeklyPlanerDi.initialize();
-  // ConnectDi.initialize();
-  // ChallengesDi.initialize();
-  // EventsDi.initialize();
-  // InspireDi.initialize();
-  // LeaderBoardDi.initialize();
-  // MenuDi.initialize();
-  // FeelWellDi.initialize();
-  // NotificationsDi.initialize();
-  // MediaUtilsDi.initialize();
-  // RelationshipDi.initialize();
+  DataDi.initialize();
+  CommonDi.initialize();
+  AuthenticationDi.initialize();
+  MediaUtilsDi.initialize();
 }
