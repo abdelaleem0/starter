@@ -98,7 +98,7 @@ class _UserLoginBodyState extends State<_UserLoginBody> {
   void _onLoginIsSuccess(UserLoginState state) {
     if (state.loginState.data?.isComplete == true) {
       BlocProvider.of<UserCubit>(context).setAppUserModel(
-          state.loginState.data ??  AppUserModel.initial());
+          state.loginState.data ??  const AppUserModel.initial());
       BlocProvider.of<AuthenticationBloc>(context)
           .add(AuthenticatedEvent()); // will effect to above listener
     } else {

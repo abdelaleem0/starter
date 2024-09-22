@@ -40,7 +40,7 @@ class UserCubit extends Cubit<UserState> {
       //
       //   // homeModel: null
       // );
-      emit(state.reduce(Async.successWithoutData()));
+      emit(state.reduce(const Async.successWithoutData()));
     }, onError: (errorMessage) {
       emit(state.reduce(Async.failure(errorMessage)));
     }, catchError: (exception) {
@@ -62,39 +62,39 @@ class UserCubit extends Cubit<UserState> {
   void setUserName(String firstName, String username) {
     emit(state.reduce(Async.success(state.userData.data
             ?.copyWith(firstName: firstName, username: username) ??
-         AppUserModel.initial()
+         const AppUserModel.initial()
             .copyWith(firstName: firstName, username: username))));
   }
 
   void updateFirstName(String firstName){
     emit(state.reduce(Async.success(state.userData.data
         ?.copyWith(firstName: firstName)??
-         AppUserModel.initial().copyWith(firstName: firstName)
+         const AppUserModel.initial().copyWith(firstName: firstName)
     )));
   }
   void updateUserName(String userName){
     emit(state.reduce(Async.success(state.userData.data
         ?.copyWith(username: userName)??
-         AppUserModel.initial().copyWith(username: userName)
+         const AppUserModel.initial().copyWith(username: userName)
     )));
   }
 
   updateEmail(String email) {
     emit(state.reduce(Async.success(
         state.userData.data?.copyWith(email: email) ??
-             AppUserModel.initial().copyWith(email: email))));
+             const AppUserModel.initial().copyWith(email: email))));
   }
 
   updateProfilePicture(String profilePicture) {
     emit(state.reduce(Async.success(
         state.userData.data?.copyWith(profilePicture: profilePicture) ??
-             AppUserModel.initial().copyWith(profilePicture: profilePicture))));
+             const AppUserModel.initial().copyWith(profilePicture: profilePicture))));
   }
 
   updateTransaction(Transaction transaction) {
     emit(state.reduce(Async.success(
         state.userData.data?.copyWith(transaction: transaction) ??
-             AppUserModel.initial().copyWith(transaction: transaction))));
+             const AppUserModel.initial().copyWith(transaction: transaction))));
   }
 
   updateBasicProfileInformation({String? firstName, String? username}) {
@@ -102,7 +102,7 @@ class UserCubit extends Cubit<UserState> {
           firstName: firstName,
           username: username,
         ) ??
-         AppUserModel.initial()
+         const AppUserModel.initial()
             .copyWith(firstName: firstName, username: username))));
   }
 
@@ -119,7 +119,7 @@ class UserCubit extends Cubit<UserState> {
     if (currentState) {
       emit(state.reduce(Async.success(state.userData.data
               ?.copyWith(hasNotOpenedNotification: false) ??
-          AppUserModel.initial().copyWith(hasNotOpenedNotification: false))));
+          const AppUserModel.initial().copyWith(hasNotOpenedNotification: false))));
     }
   }
 }

@@ -2,15 +2,12 @@ import 'dart:async';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:starter/app/authentication/domain/use_case/is_user_authenticated_use_case.dart';
 import 'package:starter/app/authentication/domain/use_case/logout_use_case.dart';
-import 'package:starter/common/domain/use_cases/biometric/delete_biometric_use_case.dart';
-import 'package:starter/common/domain/use_cases/biometric/is_biometric_enabled_use_case.dart';
 import 'package:starter/common/domain/use_cases/delete_account_use_case.dart';
 import 'package:starter/common/domain/use_cases/delete_token_use_case.dart';
 import 'package:starter/common/domain/use_cases/update_fcm_token_use_case.dart';
 import 'package:starter/data/preferences/preferences_helper.dart';
 import 'package:starter/data/preferences/shared_preferences_helper_imp.dart';
 // import 'package:starter/notifications/utils/notifications_permissions.dart';
-import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:starter/common/utils/bloc_utils.dart';
@@ -31,16 +28,12 @@ class AuthenticationBloc extends Bloc<AuthenticationEvent, AuthState> {
   late final LogoutUseCase _logoutUseCase;
   late final DeleteAccountUseCase _deleteAccountUseCase;
   late final UpdateFcmTokenUseCase _updateFcmTokenUseCase;
-  late final IsBiometricEnabledUseCase _isBiometricEnabledUseCase;
-  late final DeleteBiometricUseCase _deleteBiometricUseCase;
   late final DeleteCachedUserUseCase _deleteCachedUserUseCase;
 
   StreamSubscription? _streamSubscription ;
 
   AuthenticationBloc() : super(AuthUninitialized()) {
     _loadUseCases();
-    on<AppStartBiometricEvent>(_onBiometricChecked);
-    on<AppRetryBiometricEvent>(_onRetryBiometricChecked);
     on<AppEnableBiometricEvent>(_onEnablingBiometricChecked);
     on<AppStartedEvent>(_onAppStarted);
     on<AuthenticatedEvent>(_onAuthenticated);
@@ -56,8 +49,6 @@ class AuthenticationBloc extends Bloc<AuthenticationEvent, AuthState> {
     _isUserAuthenticatedUseCase = injector();
     _logoutUseCase = injector();
     _deleteAccountUseCase = injector();
-    _isBiometricEnabledUseCase = injector();
-    _deleteBiometricUseCase = injector();
     _updateFcmTokenUseCase = injector();
     _deleteCachedUserUseCase = injector();
   }
@@ -120,7 +111,6 @@ class AuthenticationBloc extends Bloc<AuthenticationEvent, AuthState> {
 
     await collect(task: () async {
       await _logoutUseCase.execute();
-      await _deleteBiometricUseCase.execute();
       await resetScopeDependencies();
 
       if(_streamSubscription != null) {
@@ -199,20 +189,6 @@ class AuthenticationBloc extends Bloc<AuthenticationEvent, AuthState> {
     emit(AuthUserEmail());
   }
 
-  Future<void> _onBiometricChecked(
-      AppStartBiometricEvent event, Emitter<AuthState> emit) async {
-    // todo take this to splash page
-    if (await _isBiometricEnabledUseCase.execute() ) {
-      emit(AuthStartBiometricAuthentication());
-    } else {
-      await _onAppStarted(AppStartedEvent(), emit);
-    }
-  }
-
-  Future<void> _onRetryBiometricChecked(
-      AppRetryBiometricEvent event, Emitter<AuthState> emit) async {
-    emit(AuthRetryBiometricAuthentication());
-  }
 
   Future<void> _onEnablingBiometricChecked(
       AppEnableBiometricEvent event, Emitter<AuthState> emit) async {

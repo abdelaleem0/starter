@@ -107,7 +107,7 @@ class _SocialMergePageBody extends StatelessWidget {
         }
         if (state.mergeState.isSuccess) {
           BlocProvider.of<UserCubit>(context)
-              .setAppUserModel(state.mergeState.data ?? AppUserModel.initial());
+              .setAppUserModel(state.mergeState.data ?? const AppUserModel.initial());
           _onSuccessUserLogged(context);
         }
       },

@@ -70,7 +70,7 @@ class _EmailVerificationFormState extends State<EmailVerificationForm> {
       BuildContext context, OtpVerificationState state) {
     if (state.verifyOtp.data != null) {
       BlocProvider.of<UserCubit>(context).setAppUserModel(
-        state.verifyOtp.data?.appUserModel ?? AppUserModel.initial(),
+        state.verifyOtp.data?.appUserModel ?? const AppUserModel.initial(),
       );
       switch (widget.resendOtpInput.otpVerificationType) {
         case OtpVerificationType.passwordReset:

@@ -1,5 +1,4 @@
 import 'package:starter/common/ui/custom_widgets/app_icons/app_network_image.dart';
-import 'package:starter/common/utils/ajmal_icons/ajmal_icons.dart';
 import 'package:starter/common/utils/app_style/app_colors.dart';
 import 'package:starter/common/utils/app_style/text_styles.dart';
 import 'package:starter/common/utils/dimensions.dart';
@@ -33,7 +32,7 @@ class UserImage extends StatelessWidget {
     final showFirstLetter = (imagePath??'').isEmpty && firstLetter != null;
     if(isDeleted){
       return const Icon(
-        AjmalIcons.ajmallogo,
+        Icons.app_blocking_outlined,
         color: AppColors.neutralColors1,
         size: Dimensions.xxLarge,
       );

@@ -1,6 +1,4 @@
-import 'package:starter/app/authentication/ui/complete_register/first_name/first_name_page.dart';
 import 'package:starter/app/authentication/ui/rotate_screen.dart';
-import 'package:starter/app/authentication/ui/social/social_auth_page.dart';
 import 'package:starter/common/blocs/authentication/authentication_bloc.dart';
 import 'package:starter/common/blocs/authentication/states.dart';
 import 'package:starter/common/ui/splash_page/splash_page.dart';

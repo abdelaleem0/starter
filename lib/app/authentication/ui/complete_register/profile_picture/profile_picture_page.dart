@@ -7,7 +7,6 @@ import 'package:starter/common/blocs/authentication/events.dart';
 import 'package:starter/common/blocs/authentication/states.dart';
 import 'package:starter/common/blocs/user_cubit/user_cubit.dart';
 import 'package:starter/common/ui/custom_widgets/app_icons/app_icon.dart';
-import 'package:starter/app/authentication/utils/localization/authentication_localizer.dart';
 import 'package:starter/common/ui/custom_widgets/app_buttons/app_buttons.dart';
 import 'package:starter/common/utils/app_routes/router_functions.dart';
 import 'package:starter/common/utils/app_style/app_colors.dart';
@@ -69,7 +68,7 @@ class __UploadUserPictureBodyState extends State<_UploadUserPictureBody> {
       listener: (context, state) {
         if (state.completeRegisterState.isSuccess) {
           BlocProvider.of<UserCubit>(context).setAppUserModel(
-              state.completeRegisterState.data ?? AppUserModel.initial());
+              state.completeRegisterState.data ?? const AppUserModel.initial());
           BlocProvider.of<AuthenticationBloc>(context)
               .add(AppEnableBiometricEvent());
         }  if (state.completeRegisterState.isFailure) {

@@ -11,8 +11,6 @@ import 'package:starter/common/domain/use_cases/delete_token_use_case.dart';
 import 'package:starter/common/domain/use_cases/fcm_token_use_case.dart';
 import 'package:starter/common/domain/use_cases/get_device_info_use_case.dart';
 import 'package:starter/common/domain/use_cases/get_local_preferences_use_case.dart';
-import 'package:starter/common/domain/use_cases/increase_path_views_use_case.dart';
-import 'package:starter/common/domain/use_cases/inscrease_shares_count_use_case.dart';
 import 'package:starter/common/domain/use_cases/open_calendar_use_case.dart';
 import 'package:starter/common/domain/use_cases/update_fcm_token_use_case.dart';
 import 'package:starter/common/domain/use_cases/update_profile_picture_use_case.dart';
@@ -56,8 +54,6 @@ class CommonDi {
     injector.registerLazySingleton(() => AddEventToCalenderUseCase());
     injector.registerLazySingleton(() => OpenCalendarUseCase());
 
-    injector.registerLazySingleton(() => IncreaseSharesCountUseCase(injector()));
-    injector.registerLazySingleton(() => IncreasePathViewsUseCase(injector()));
   }
 }
 

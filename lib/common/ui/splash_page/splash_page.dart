@@ -5,8 +5,6 @@ import 'package:starter/common/blocs/authentication/events.dart';
 import 'package:starter/common/blocs/user_cubit/user_cubit.dart';
 import 'package:starter/common/ui/custom_widgets/app_buttons/app_material_buttons.dart';
 import 'package:starter/common/utils/app_style/app_colors.dart';
-import 'package:starter/common/utils/assets_paths/animated_json_paths.dart';
-import 'package:starter/common/utils/assets_paths/images_path.dart';
 import 'package:starter/common/utils/dimensions.dart';
 import 'package:starter/common/utils/localization/common_localizer.dart';
 import 'package:flutter/material.dart';
@@ -61,17 +59,6 @@ class _SplashState extends State<Splash> {
   //todo add your images here for caching
   @override
   void didChangeDependencies() {
-    precacheImage(const AssetImage(ImagesPaths.intentionWeeklyPlannerBackground), context);
-    precacheImage(const AssetImage(ImagesPaths.youShouldKnowBackground), context);
-    precacheImage(const AssetImage(ImagesPaths.feelWellBackground), context);
-    precacheImage(const AssetImage(ImagesPaths.setAGoalBackground), context);
-    precacheImage(const AssetImage(ImagesPaths.relationshipRoadmapBackground), context);
-    precacheImage(const AssetImage(ImagesPaths.relationshipStartBackground), context);
-    precacheImage(const AssetImage(ImagesPaths.leaderBoardBackground), context);
-    precacheImage(const AssetImage(ImagesPaths.weeklyPlannerBackground), context);
-    precacheImage(const AssetImage(ImagesPaths.startYourJourneyWeeklyPlanner), context);
-    precacheImage(const AssetImage(ImagesPaths.startYourJourneyConnect), context);
-    precacheImage(const AssetImage(ImagesPaths.relationshipCheckInCelebrateBackground), context);
     super.didChangeDependencies();
   }
 

@@ -125,7 +125,7 @@ class _SocialEmailPageBodyState extends State<_SocialEmailPageBody> {
     final bool isValidate = formKey.currentState?.validate() ?? false;
     if(isValidate){
       if (_emailAddress != null && _emailAddress != '' && _providerData != null) {
-        SocialCheckProviderStatusInput input = _providerData!
+        SocialCheckProviderStatusInput input = _providerData
             .modify(email: _emailAddress, isEmailManuallyEntered: true)
             .mapToProviderStatusInput();
         SocialEmailPageCubit.of(context).checkStatus(input);

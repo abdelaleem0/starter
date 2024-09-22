@@ -6,7 +6,6 @@ import 'package:starter/common/blocs/authentication/authentication_bloc.dart';
 import 'package:starter/common/blocs/authentication/events.dart';
 import 'package:starter/common/blocs/authentication/states.dart';
 import 'package:starter/common/utils/bottom_sheets/show_bottom_sheet_common.dart';
-import 'package:starter/app/authentication/utils/localization/authentication_localizer.dart';
 import 'package:starter/common/ui/custom_widgets/app_buttons/app_buttons.dart';
 import 'package:starter/common/utils/app_routes/router_functions.dart';
 import 'package:starter/common/utils/app_style/app_colors.dart';

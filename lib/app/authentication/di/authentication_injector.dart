@@ -19,13 +19,8 @@ import 'package:starter/app/authentication/domain/use_case/social/social_package
 import 'package:starter/app/authentication/domain/use_case/social/social_packages/social_auth_packages_factory.dart';
 import 'package:starter/app/authentication/domain/use_case/social/social_register_use_case.dart';
 import 'package:starter/app/authentication/domain/use_case/user_register_use_case.dart';
-import 'package:starter/common/data/biometric_repository_impl.dart';
 import 'package:starter/common/data/otp_repository_imp.dart';
-import 'package:starter/common/domain/repositories/biometric_repository.dart';
 import 'package:starter/common/domain/repositories/otp_repository.dart';
-import 'package:starter/common/domain/use_cases/biometric/delete_biometric_use_case.dart';
-import 'package:starter/common/domain/use_cases/biometric/is_biometric_enabled_use_case.dart';
-import 'package:starter/common/domain/use_cases/biometric/set_biometric_use_case.dart';
 import 'package:starter/common/domain/use_cases/cached_user_data/set_cached_user_apple_email_use_case.dart';
 import 'package:starter/common/domain/use_cases/otp/delete_otp_use_case.dart';
 import 'package:starter/common/domain/use_cases/otp/get_otp_use_case.dart';
@@ -77,10 +72,6 @@ class AuthenticationDi {
 
 
     injector.registerFactory(() => SocialLogInUseCase(injector() , injector()));
-    injector.registerFactory(() => IsBiometricEnabledUseCase(injector()));
-    injector.registerFactory(() => DeleteBiometricUseCase(injector()));
-    injector.registerFactory(() => SetBiometricUseCase(injector()));
-    injector.registerFactory<BiometricRepository>(() => BiometricRepositoryImpl(injector()));
     injector.registerFactory(() => LogoutUseCase(injector(),injector()));
 
 

@@ -37,25 +37,20 @@ dependencies:
     sdk: flutter
 
   cupertino_icons: ^1.0.6
-  chewie:
-  #animate
-  flutter_animate: ^4.5.0
-  flutter_bloc: ^8.1.3
-  bloc: ^8.1.2
-  flutter_secure_storage: ^7.0.1
+  flutter_bloc: ^8.1.6
+  bloc: ^8.1.4
+  flutter_secure_storage: ^9.2.2
   equatable: ^2.0.5
-  get_it: ^7.6.4
-  devicelocale: ^0.6.0
-  json_annotation: ^4.1.0
+  get_it: ^8.0.0
+  devicelocale: ^0.8.1
+  json_annotation: ^4.9.0
   pin_code_fields: ^8.0.1
-  rxdart: ^0.27.7
-  phone_number: ^1.0.0
-  image_picker: ^1.0.4
-  photo_view: ^0.14.0
+  image_picker: ^1.1.2
+  photo_view: ^0.15.0
   infinite_scroll_pagination: ^4.0.0
   intl:
   video_thumbnail: ^0.5.3
-  mime: ^1.0.1
+  mime: ^1.0.6
   image: ^4.0.15
   path_provider: ^2.0.9
   path_provider_android: ^2.0.13
@@ -66,120 +61,58 @@ dependencies:
   permission_handler:
   isolate_handler: ^1.0.0
   share_plus:
-  in_app_review: ^2.0.9
-  phone_form_field: ^7.0.5
-  shimmer: ^2.0.0
   add_2_calendar:
-  google_fonts: ^6.1.0
   package_info_plus:
   url_launcher: ^6.3.0
   lottie: ^3.1.1
 
-  file_picker: ^5.2.6
-  image_cropper: ^5.0.1
-  country_calling_code_picker: ^2.0.0
+  file_picker: ^8.1.2
+  image_cropper: ^8.0.2
   shared_preferences: ^2.0.15
   flutter_image_compress:
 
-  timezone: ^0.9.0
-  local_auth: ^2.1.3
-
-  #graphql
   graphql_flutter:
   http:
-  gql_http_link:
-
-  smooth_page_indicator: ^1.0.0+2
   table_calendar:
   ionicons:
   iconsax: ^0.0.8
-  dropdown_button2: ^1.9.2
-  spring: ^2.0.2
-  scroll_indicator: ^0.0.3
   adaptive_scrollbar: ^2.1.2
-  animated_svg:
-  #  fluttertoast: ^8.2.1
-
   pdfx:
 
   dio: ^5.0.1
-  #pdf:
   internet_connection_checker:
-  connectivity_plus:
   ntp: ^2.0.0
 
   responsive_framework: ^1.4.0
-  device_preview:
-  #firebase
-#  firebase_core:
-  #  firebase_messaging: 14.2.1
-  #social login
-  sign_in_with_apple: ^4.3.0
+  sign_in_with_apple: ^6.1.2
   crypto: ^3.0.3
-  flutter_facebook_auth: ^4.3.2
   google_sign_in: ^6.0.2
   flutter_native_splash:
   firebase_messaging: 14.0.1
-  flutter_local_notifications: ^17.2.1+2
-  eraser: ^2.0.1
+  eraser: ^3.0.0
   document_file_save_plus: ^2.0.0
   image_gallery_saver: ^2.0.3
   top_snackbar_flutter: ^3.0.0+1
-  device_info_plus:
-  extended_nested_scroll_view: ^6.1.0
-  auto_size_text: ^3.0.0
+  device_info_plus: ^10.1.2
   cached_network_image: ^3.2.3
   path: ^1.8.3
-  webview_flutter: ^4.2.2
-  flutter_quill:
-  readmore: ^3.0.0
-  #  audioplayers:
-#  just_audio:
-  flutter_staggered_animations: ^1.1.1
-  #for deeplink in android and ios
-  uni_links:
   video_compress: ^3.1.0
-  syncfusion_flutter_calendar :
-  manage_calendar_events: ^2.0.3
-  android_intent :
-  #  #carousel page_view
-  #  carousel_slider: ^4.2.1
-
-  #hooked_bloc: ^1.4.2
-  #flutter_hooks:
-  animated_text_kit: ^4.2.2
   http_parser: ^4.0.2
-  enhance_stepper: ^1.0.1
-  # common
-  #  carousel_slider: ^5.0.0
-  easy_stepper:
-  animation_list: ^3.0.0
   uuid: ^4.4.2
-#  unique_identifier: ^0.3.0
 
   flutter_html: ^3.0.0-beta.2
-  #app setting
 dev_dependencies:
+  dependency_validator: ^3.0.0
+
   flutter_test:
     sdk: flutter
 
-  # The "flutter_lints" package below contains a set of recommended lints to
-  # encourage good coding practices. The lint set provided by the package is
-  # activated in the `analysis_options.yaml` file located at the root of your
-  # package. See that file for information about deactivating specific lint
-  # rules and activating additional ones.
+
   flutter_lints: ^3.0.0
   build_runner: ^2.3.3
   json_serializable: ^6.5.4
-# For information on the generic Dart part of this file, see the
-# following page: https://dart.dev/tools/pub/pubspec
-
-# The following section is specific to Flutter packages.
 flutter:
 
-  # The following line ensures that the Material Icons font is
-  # included with your application, so that you can use the icons in
-  # the material Icons class.
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:

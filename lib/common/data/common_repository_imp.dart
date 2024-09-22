@@ -1,16 +1,9 @@
 import 'dart:io';
 import 'package:starter/common/data/graphql/common_requests.dart';
-import 'package:starter/common/data/models/api_increment_paths_result.dart';
-import 'package:starter/common/data/models/api_system_action_tracker/api_system_action_tracker_result.dart';
-import 'package:starter/common/data/models/api_system_action_tracker/input/api_system_action_tracker_input.dart';
 import 'package:starter/common/data/models/api_update_profile_picture_result.dart';
-import 'package:starter/common/data/models/intention_reminder_input/api_intention_reminder_input.dart';
 import 'package:starter/common/data/models/update_fcm_token/api_update_fcm_token_result.dart';
 import 'package:starter/common/domain/exceptions/exceptions.dart';
 import 'package:starter/common/domain/exceptions/status_codes.dart';
-import 'package:starter/common/domain/inputs/filter_intention_reminder_input.dart';
-import 'package:starter/common/domain/inputs/path_view_enum.dart';
-import 'package:starter/common/domain/inputs/system_action_tracker_input.dart';
 import 'package:starter/common/domain/repositories/common_repository.dart';
 import 'package:starter/common/utils/constants.dart';
 import 'package:starter/data/utils/graphql_extensions.dart';
@@ -178,50 +171,7 @@ class CommonRepositoryImp implements CommonRepository {
     }
   }
 
-  @override
 
-  @override
-  Future<void> increaseSharesCount(SystemActionTrackerInput input) async {
-    final request =await _graphQLClient
-        .fetch(query: increaseSharesCountQuery, variables: {
-      "input": ApiSystemActionTrackerInput.fromInput(input).toJson()
-    });
-    if (request.hasException || request.data == null) {
-      throw const ServerException();
-    }else{
-      final result = ApiSystemActionTrackerResult.fromJson(request.data!).incrementShares;
-      if (result?.code == StatusCodes.success) {
-        return;
-      } else {
-        throw ApiRequestException(
-            result?.code ?? StatusCodes.unknown, result?.message ?? "");
-      }
-    }
-  }
 
-  @override
-  Future<void> increasePathViews(PathViewEnum pathViewEnum) async {
-    final request =
-        await _graphQLClient.fetch(query: incrementPathViewsQuery, variables: {
-      "input": {"pathType": pathViewEnum.toApiConverter}
-    });
-    if (request.hasException || request.data == null) {
-      throw const ServerException();
-    } else {
-      final result =
-          ApiIncrementPathsResult.fromJson(request.data!).incrementPathViews;
-      if (result?.code == StatusCodes.success) {
-        return;
-      } else {
-        throw ApiRequestException(
-            result?.code ?? StatusCodes.unknown, result?.message ?? "");
-      }
-    }
-  }
 
-  @override
-  Future<dynamic> getRandomQuran(FilterIntentionReminderInput filterIntentionReminderInput) {
-    // TODO: implement getRandomQuran
-    throw UnimplementedError();
-  }
 }

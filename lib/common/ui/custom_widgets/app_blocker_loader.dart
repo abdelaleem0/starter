@@ -1,6 +1,5 @@
 import 'package:starter/common/ui/custom_widgets/app_toast/toast.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
 class PurchasePageViewController {
   static final PurchasePageViewController instance =

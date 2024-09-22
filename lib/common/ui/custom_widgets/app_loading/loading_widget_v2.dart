@@ -1,4 +1,3 @@
-import 'package:starter/common/utils/ajmal_icons/ajmal_icons.dart';
 import 'package:starter/common/utils/app_style/app_colors.dart';
 import 'package:flutter/material.dart';
 
@@ -73,7 +72,7 @@ class _LoadingWidgetV2State extends State<LoadingWidgetV2>
                 padding: EdgeInsets.all(20.0),
                 child: FittedBox(
                     child: Icon(
-                  AjmalIcons.ajmallogo,
+                  Icons.app_blocking_outlined,
                   color: AppColors.neutralColors1,
                 )),
               )),

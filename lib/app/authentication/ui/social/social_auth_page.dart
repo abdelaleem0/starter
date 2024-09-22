@@ -16,7 +16,6 @@ import '../../../../../common/ui/header_widget.dart';
 import 'package:starter/common/utils/app_routes/router_functions.dart';
 import 'package:starter/common/utils/app_style/app_colors.dart';
 import 'package:starter/common/utils/app_style/text_styles.dart';
-import 'package:starter/common/utils/assets_paths/animated_json_paths.dart';
 import 'package:starter/common/utils/assets_paths/svg_paths.dart';
 import 'package:starter/common/utils/common.dart';
 import 'package:starter/common/utils/dimensions.dart';
@@ -78,9 +77,9 @@ class _AuthenticationStartPageState extends State<_AuthenticationStartBody> {
               SocialAuthPackagesResultSingleton.instance?.packageData =
                   logInStatusData?.packagesResult;
               BlocProvider.of<UserCubit>(context).setAppUserModel(
-                  logInStatusData?.appUserModel ?? AppUserModel.initial());
+                  logInStatusData?.appUserModel ?? const AppUserModel.initial());
               _onSuccessUserLogged(
-                  logInStatusData?.appUserModel ?? AppUserModel.initial());
+                  logInStatusData?.appUserModel ?? const AppUserModel.initial());
             } else {
               if (logInStatusData?.actionRequired != null) {
                 SocialAuthPackagesResultSingleton.instance?.packageData =

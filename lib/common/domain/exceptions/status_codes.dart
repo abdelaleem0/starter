@@ -18,7 +18,6 @@ abstract class StatusCodes {
   static const failedToLoginWithGoogle = 818;
   static const failedToGetGoogleUser = 819;
   static const hasNoVerifiedPhoneError = 820;
-  static const haveNotSketches = 641;
   static const paymentRequireCode = 736;
 
 }

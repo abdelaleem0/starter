@@ -48,7 +48,7 @@ class AppUserModel extends Equatable {
         required this.hasNotOpenedNotification,
       });
 
-   AppUserModel.initial()
+   const AppUserModel.initial()
       : this(
             id: null,
             token: null,

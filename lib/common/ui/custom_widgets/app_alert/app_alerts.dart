@@ -3,7 +3,6 @@ import 'package:starter/common/ui/custom_widgets/app_buttons/app_buttons.dart';
 import 'package:starter/common/ui/custom_widgets/app_icons/app_icon.dart';
 import 'package:starter/common/utils/app_style/app_colors.dart';
 import 'package:starter/common/utils/app_style/text_styles.dart';
-import 'package:starter/common/utils/assets_paths/svg_paths.dart';
 import 'package:starter/common/utils/dimensions.dart';
 import 'package:starter/common/utils/localization/common_localizer.dart';
 import 'package:flutter/material.dart';
@@ -353,7 +352,7 @@ class AppAlerts extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   if(useIcon==true)...[
-                    const Center(child: AppIcons(imagePath: SvgPaths.good_job,))
+                   const  Center(child: AppIcons(imagePath: 'test',))
                   ],
                   const SizedBox(height: PaddingDimensions.normal),
                   subTitle != null

@@ -1,4 +1,3 @@
-import 'package:starter/common/ui/custom_widgets/questions/radio_choice_tile.dart';
 import 'package:starter/common/utils/localization/common_localizer.dart';
 
 class QuestionValidation {

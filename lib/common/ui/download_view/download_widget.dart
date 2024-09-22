@@ -1,5 +1,4 @@
 import 'package:starter/common/ui/custom_widgets/app_buttons/app_buttons.dart';
-import 'package:starter/common/ui/custom_widgets/sketch/sketch_bottom_sheets.dart';
 import 'package:starter/common/ui/download_view/download_view_cubit.dart';
 import 'package:starter/common/ui/download_view/download_view_state.dart';
 import 'package:starter/common/utils/app_style/app_colors.dart';
@@ -90,11 +89,6 @@ class _DownloadWidgetBody extends StatelessWidget {
           color: AppColors.primaryColorsSolid4Default,
         ),
         onPressed: () {
-          ContentActionBottomSheets.showDownloadBottomSheet(
-            context: context,
-            sketchPdfIdentifier: sketchPdfIdentifier,
-            sketchImageIdentifier: sketchImageIdentifier,
-            sketchId: sketchId);
         },
       ),
     );

@@ -8,7 +8,6 @@ import 'package:starter/common/ui/custom_widgets/app_toast/toast.dart';
 import 'package:starter/common/utils/constants.dart';
 import 'package:starter/common/utils/extensions/extensions.dart';
 import 'package:starter/common/utils/extensions/string.dart';
-import 'package:starter/data/preferences/shared_preferences_helper_imp.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';

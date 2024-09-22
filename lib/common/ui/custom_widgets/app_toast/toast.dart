@@ -128,9 +128,8 @@ class _Toast extends StatefulWidget {
       this.textStyle,
       required this.title,
       this.leadingIcon,
-      this.leadingIconPath,
       this.leadingIconColor,
-      this.duration});
+      this.duration, this.leadingIconPath});
   final VoidCallback onDismiss;
   final Color? color;
   final Color? borderColor;
