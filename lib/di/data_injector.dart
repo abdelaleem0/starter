@@ -1,10 +1,10 @@
 import 'dart:io';
 import 'package:starter/common/utils/constants.dart';
 import 'package:starter/common/utils/real_time_timer_service.dart';
-import 'package:starter/data/preferences/preferences_helper.dart';
-import 'package:starter/data/preferences/preferences_helper_imp.dart';
-import 'package:starter/data/preferences/shared_preferences_helper.dart';
-import 'package:starter/data/preferences/shared_preferences_helper_imp.dart';
+import 'package:starter/data/preferences/secure_storage/preferences_helper.dart';
+import 'package:starter/data/preferences/secure_storage/preferences_helper_imp.dart';
+import 'package:starter/data/preferences/shared_preferences/shared_preferences_helper.dart';
+import 'package:starter/data/preferences/shared_preferences/shared_preferences_helper_imp.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:graphql_flutter/graphql_flutter.dart';

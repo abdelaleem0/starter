@@ -30,7 +30,7 @@ class ApplicationAppBars {
         mainAxisSize: MainAxisSize.min,
         children: [
           const AppIcons(
-            imagePath: SvgPaths.ajmalLogo,
+            imagePath: SvgPaths.AppLogo,
             width: IconDimensions.medium,
             height: IconDimensions.medium,
             color: AppColors.neutralColors1,

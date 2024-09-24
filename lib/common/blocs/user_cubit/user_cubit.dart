@@ -91,11 +91,7 @@ class UserCubit extends Cubit<UserState> {
              const AppUserModel.initial().copyWith(profilePicture: profilePicture))));
   }
 
-  updateTransaction(Transaction transaction) {
-    emit(state.reduce(Async.success(
-        state.userData.data?.copyWith(transaction: transaction) ??
-             const AppUserModel.initial().copyWith(transaction: transaction))));
-  }
+
 
   updateBasicProfileInformation({String? firstName, String? username}) {
     emit(state.reduce(Async.success(state.userData.data?.copyWith(

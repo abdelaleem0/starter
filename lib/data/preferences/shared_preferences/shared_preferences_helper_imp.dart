@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:starter/common/domain/models/otp.dart';
-import 'package:starter/data/preferences/shared_preferences_helper.dart';
+import 'package:starter/data/preferences/shared_preferences/shared_preferences_helper.dart';
 import 'package:starter/di/app_injector.dart';
 
 class SharedPreferencesHelperImp implements ShardPreferencesHelper {

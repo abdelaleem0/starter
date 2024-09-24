@@ -32,7 +32,7 @@ class SvgPaths {
   static const String editProfile="$_authentication/edit.svg";
 
   //Common icons
-  static const String ajmalLogo = "$_common/ajmalLogo.svg";
+  static const String AppLogo = "$_common/AppLogo.svg";
   static const String bookmarkFilled = "$_common/bookmark_filled.svg";
   static const String backButton = "$_common/back_button.svg";
   static const String noWifiIcon = "$_common/no_wifi.svg";

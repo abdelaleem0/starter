@@ -28,7 +28,7 @@ class RetryFailedLoading extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        AppIcons.getSvgIcon(imagePath: SvgPaths.ajmalLogo, size: 64),
+        AppIcons.getSvgIcon(imagePath: SvgPaths.AppLogo, size: 64),
         const SizedBox(
           height: 16,
         ),

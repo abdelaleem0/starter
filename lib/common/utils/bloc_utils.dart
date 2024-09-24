@@ -39,13 +39,6 @@ Future<void> collect<T>({
     if (catchError != null) {
       catchError(e);
     }
-  } on PaymentRequiredException catch (e) {
-    if (onError != null) {
-      onError("You need to subscribe first");
-    }
-    if (catchError != null) {
-      catchError(e);
-    }
 
   } catch (e) {
     logDebug(e);

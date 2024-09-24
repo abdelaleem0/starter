@@ -113,7 +113,7 @@ class _TheAppUserState extends State<TheAppUser> {
                         GlobalCupertinoLocalizations.delegate,
                       ],
                       supportedLocales: AppLanguages.supportedLocales,
-                      title: "Ajmal",
+                      title: "Starter",
                       builder: (context, child) {
                         return ScrollConfiguration(
                           behavior: RemoveScrollGlow(),

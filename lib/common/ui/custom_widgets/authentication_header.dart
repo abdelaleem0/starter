@@ -61,7 +61,7 @@ class AuthenticationHeader extends StatelessWidget {
               const Align(
                 alignment: AlignmentDirectional.topCenter,
                 child: AppIcons(
-                  imagePath: SvgPaths.ajmalLogo,
+                  imagePath: SvgPaths.AppLogo,
                 ),
               ),
               InkWell(

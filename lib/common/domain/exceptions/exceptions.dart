@@ -30,12 +30,9 @@ class DataBaseExists implements Exception {
 
   DataBaseExists(this.errorMessage);
 }
-class BiometricException implements Exception{}
 class GenerateThumbnailException implements Exception {}
 class UploadFileException implements Exception {
   String errorMessage;
 
   UploadFileException(this.errorMessage);
 }
-class NoSketchesException implements Exception{}
-class PaymentRequiredException implements Exception{}

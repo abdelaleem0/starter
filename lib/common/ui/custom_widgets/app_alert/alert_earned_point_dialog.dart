@@ -37,7 +37,7 @@ class AlertEarnedPointDialog extends StatelessWidget {
             ),
             clipBehavior: Clip.antiAliasWithSaveLayer,
             icon: const AppIcons(
-              imagePath: SvgPaths.ajmalLogo,
+              imagePath: SvgPaths.AppLogo,
               height: 50,
               width: 50,
             ),

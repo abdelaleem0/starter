@@ -15,7 +15,6 @@ class AppRouteNavigator {
   }
 
 
-
   // static Future<T?> pushAnimatedOpacity<T>(
   //     BuildContext context,
   //     String routeName,

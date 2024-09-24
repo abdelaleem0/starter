@@ -85,16 +85,16 @@ class AuthenticationLocalizer {
 
   static String get enterYourFirstName =>
       _localizer.translate("enterYourFirstName");
-  static String get continueAgreeToAjmals =>
-      _localizer.translate("continueAgreeToAjmals");
+  static String get continueAgreeToStarter =>
+      _localizer.translate("continueAgreeToStarter");
   static String get dontHaveAnAccount =>
       _localizer.translate("dontHaveAnAccount");
   static String get enterYourFirstNameError =>
       _localizer.translate("enterYourFirstNameError");
   static String get welcomeMessage =>
       _localizer.translate("welcomeMessage");
-  static String get welcomeAjmal =>
-      _localizer.translate("welcomeAjmal");
+  static String get welcomeApp =>
+      _localizer.translate("welcomeApp");
   static String get signUp =>
       _localizer.translate("signUp");
   static String get exName =>

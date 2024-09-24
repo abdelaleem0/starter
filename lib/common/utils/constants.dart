@@ -1,7 +1,7 @@
 import 'package:starter/common/utils/extensions/string.dart';
 
 class Constants {
-  static const packageName = "com.AjmalApp";
+  static const packageName = "com.Starter";
   static const isProductionInDebug = false;
   static const isProduction = true  ? true : isProductionInDebug;
 

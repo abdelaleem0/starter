@@ -5,9 +5,8 @@ import 'package:starter/app/authentication/domain/use_case/logout_use_case.dart'
 import 'package:starter/common/domain/use_cases/delete_account_use_case.dart';
 import 'package:starter/common/domain/use_cases/delete_token_use_case.dart';
 import 'package:starter/common/domain/use_cases/update_fcm_token_use_case.dart';
-import 'package:starter/data/preferences/preferences_helper.dart';
-import 'package:starter/data/preferences/shared_preferences_helper_imp.dart';
-// import 'package:starter/notifications/utils/notifications_permissions.dart';
+import 'package:starter/data/preferences/secure_storage/preferences_helper.dart';
+import 'package:starter/data/preferences/shared_preferences/shared_preferences_helper_imp.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:starter/common/utils/bloc_utils.dart';

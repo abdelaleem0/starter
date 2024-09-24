@@ -131,7 +131,7 @@ class _AuthenticationStartPageState extends State<_AuthenticationStartBody> {
                             ),
                             HeaderWidget(
                                 descriptionSize: Dimensions.xLarge,
-                                title: AuthenticationLocalizer.welcomeAjmal,
+                                title: AuthenticationLocalizer.welcomeApp,
                                 description:
                                     AuthenticationLocalizer.welcomeMessage),
                             const SizedBox(

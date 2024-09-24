@@ -1,7 +1,7 @@
 import 'package:starter/common/domain/inputs/local_preferences_input.dart';
 import 'package:starter/common/domain/use_cases/get_local_preferences_use_case.dart';
 import 'package:starter/data/preferences/models/local_preferences.dart';
-import 'package:starter/data/preferences/preferences_helper.dart';
+import 'package:starter/data/preferences/secure_storage/preferences_helper.dart';
 
 class SetLocalPreferencesUseCase {
   final PreferencesHelper _preferencesHelper;

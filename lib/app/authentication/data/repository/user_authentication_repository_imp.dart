@@ -21,7 +21,7 @@ import 'package:starter/app/authentication/domain/models/otp_verification/otp_ve
 import 'package:starter/app/authentication/domain/models/otp_verification/resond_otp/resend_verification_otp_input.dart';
 import 'package:starter/common/blocs/user_cubit/user_cubit.dart';
 import 'package:starter/data/preferences/models/cached_user_data.dart';
-import 'package:starter/data/preferences/preferences_helper.dart';
+import 'package:starter/data/preferences/secure_storage/preferences_helper.dart';
 import 'package:starter/data/utils/graphql_extensions.dart';
 import 'package:starter/app/authentication/data/graphql/authentication_requests.dart';
 import 'package:starter/app/authentication/data/models/forget_password/api_forget_password_result.dart';

@@ -3,6 +3,7 @@ import 'package:starter/common/blocs/app_language/app_language_bloc.dart';
 import 'package:starter/common/blocs/authentication/authentication_bloc.dart';
 import 'package:starter/common/blocs/authentication/events.dart';
 import 'package:starter/common/blocs/user_cubit/user_cubit.dart';
+import 'package:starter/common/ui/custom_widgets/app_buttons/app_buttons.dart';
 import 'package:starter/common/ui/custom_widgets/app_buttons/app_material_buttons.dart';
 import 'package:starter/common/utils/app_style/app_colors.dart';
 import 'package:starter/common/utils/dimensions.dart';
@@ -109,14 +110,12 @@ class _SplashState extends State<Splash> {
                       return timerFinished
                           ? state.userData.isFailure
                               ? UnconstrainedBox(
-                                child: AppMaterialButtons.primaryButton(
-                                    text: CommonLocalizer.retry,
+                                child: AppButton.primaryButton(
+                                  title: CommonLocalizer.retry,
                                     isExpanded: false,
                                     textColor: AppColors.primary_400,
-                                    buttonColor: AppColors.neutral_0,
+                                    backgroundColor: AppColors.neutral_0,
                                     fontSize: Dimensions.xLarge,
-                                    margin: const EdgeInsets.symmetric(horizontal: Dimensions.xxxxLarge),
-                                    height: 50,
                                     onPressed: () {
                                       BlocProvider.of<UserCubit>(context)
                                           .initializeUserData();

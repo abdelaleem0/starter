@@ -44,7 +44,7 @@ class CompleteDialogPage extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           const AppIcons(
-                            imagePath: SvgPaths.ajmalLogo,
+                            imagePath: SvgPaths.AppLogo,
                             height: 50,
                             width: 50,
                           ),

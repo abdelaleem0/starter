@@ -1,5 +1,5 @@
 
-import 'package:starter/data/preferences/preferences_helper.dart';
+import 'package:starter/data/preferences/secure_storage/preferences_helper.dart';
 
 class DeleteCachedUserDataUseCase {
   final PreferencesHelper _preferences;

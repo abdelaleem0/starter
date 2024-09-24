@@ -35,7 +35,7 @@ class SocialStatusRequiredActionUtils {
         SocialMergeBottomSheet.openBottomSheet(
           context: context,
           socialIcon: provider == SocialProviderTypeEnum.apple?SvgPaths.apple:null,
-          title: "Looks like you already have an Ajmal account!",
+          title: "Looks like you already have an Starter account!",
           description: provider == SocialProviderTypeEnum.apple
               ? "An account with this Email address already exists and connected to Apple, Would you like to link it with this Apple account?"
               : "An account with this Email address already exists and connected to Google, Would you like to link it with this Google account?",
@@ -57,7 +57,7 @@ class SocialStatusRequiredActionUtils {
           context: context,
           socialIcon:
               provider == SocialProviderTypeEnum.apple ? SvgPaths.apple : null,
-          title: "Looks like you already have an Ajmal account!",
+          title: "Looks like you already have an Starter account!",
           description: provider == SocialProviderTypeEnum.apple
               ? "An account with this email address already exists, would you like to connect Apple as an additional login method and merge the accounts?"
               : "An account with this email address already exists, would you like to connect Google as an additional login method and merge the accounts?",
@@ -69,7 +69,7 @@ class SocialStatusRequiredActionUtils {
           socialIcon:
               provider == SocialProviderTypeEnum.apple ? SvgPaths.apple : null,
           context: context,
-          title: "Looks like you already have an Ajmal account!",
+          title: "Looks like you already have an Starter account!",
 
           description: provider == SocialProviderTypeEnum.apple
               ? "An account with this Email address already exists and connected to Apple, Would you like to link it with this Apple account?"

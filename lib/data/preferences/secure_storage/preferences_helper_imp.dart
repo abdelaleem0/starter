@@ -2,8 +2,8 @@ import 'dart:convert';
 
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:starter/common/domain/models/token.dart';
-import 'models/cached_user_data.dart';
-import 'models/local_preferences.dart';
+import '../models/cached_user_data.dart';
+import '../models/local_preferences.dart';
 import 'preferences_helper.dart';
 
 class PreferencesHelperImp implements PreferencesHelper {
@@ -34,15 +34,6 @@ class PreferencesHelperImp implements PreferencesHelper {
   Future<void> deleteBiometric() async {
     await _storage.delete(key: _PreferencesKeys.biometricKey);
   }
-  // @override
-  // Future<void> setLanguage(String language)async  {
-  //   return await _storage.write(key: _PreferencesKeys.languageKey, value: language);
-  // }
-  //
-  // @override
-  // Future<String?> getLanguage() async{
-  //   return await _storage.read(key: _PreferencesKeys.languageKey);
-  // }
 
   @override
   Future<void> setToken(Token token) async {
@@ -98,11 +89,6 @@ class PreferencesHelperImp implements PreferencesHelper {
   @override
   Future<void> setUserData(CachedUserData data) async {
     await setId(data.id);
-    // todo: un comment this
-    // await _storage.write(
-    //     key: _PreferencesKeys.userNameKey, value: data.username);
-    // await _storage.write(
-    //     key: _PreferencesKeys.profilePictureKey, value: data.profilePicture);
     await setToken(data.token);
   }
 

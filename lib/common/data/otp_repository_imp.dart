@@ -1,6 +1,6 @@
 import 'package:starter/common/domain/models/otp.dart';
 import 'package:starter/common/domain/repositories/otp_repository.dart';
-import 'package:starter/data/preferences/shared_preferences_helper.dart';
+import 'package:starter/data/preferences/shared_preferences/shared_preferences_helper.dart';
 
 class OTPRepositoryImp implements OTPRepository{
   final ShardPreferencesHelper _shardPreferencesHelper;

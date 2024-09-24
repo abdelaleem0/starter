@@ -1,10 +1,10 @@
 import 'dart:async';
 import 'dart:io';
 
-import 'package:starter/data/preferences/shared_preferences_helper.dart';
 import 'package:devicelocale/devicelocale.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:starter/data/preferences/shared_preferences/shared_preferences_helper.dart';
 
 import '../../../di/app_injector.dart';
 import '../../base/localization/app_languages.dart';

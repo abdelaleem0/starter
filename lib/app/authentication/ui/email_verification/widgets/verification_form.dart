@@ -103,7 +103,7 @@ class _EmailVerificationFormState extends State<EmailVerificationForm> {
           //todo:localization
           SocialMergeBottomSheet.openBottomSheet(
             context: context,
-            title: "Looks like you already have an Ajmal account!",
+            title: "Looks like you already have an Starter account!",
             socialIcon: provider == SocialProviderTypeEnum.apple
                 ? SvgPaths.apple
                 : null,

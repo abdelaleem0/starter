@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:starter/di/app_injector.dart';
-import 'package:starter/di/app_starter.dart';
+import 'package:starter/app_user.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -20,7 +20,7 @@ void main() async {
   // await Future.delayed(const Duration(seconds: 1));  // for splash screen Todo(maybe need to delete this delay) in android 13 it appears and remove immediately.
   // await Firebase.initializeApp(
   //   options: DefaultFirebaseOptions.currentPlatform,
-    // name: "Ajmal"
+    // name: "Starter"
   // );
 
 
