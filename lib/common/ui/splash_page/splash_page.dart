@@ -4,7 +4,6 @@ import 'package:starter/common/blocs/authentication/authentication_bloc.dart';
 import 'package:starter/common/blocs/authentication/events.dart';
 import 'package:starter/common/blocs/user_cubit/user_cubit.dart';
 import 'package:starter/common/ui/custom_widgets/app_buttons/app_buttons.dart';
-import 'package:starter/common/ui/custom_widgets/app_buttons/app_material_buttons.dart';
 import 'package:starter/common/utils/app_style/app_colors.dart';
 import 'package:starter/common/utils/dimensions.dart';
 import 'package:starter/common/utils/localization/common_localizer.dart';
